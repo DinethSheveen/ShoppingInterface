@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <!--Linking the CSS stylesheet-->
+  <link rel="stylesheet" href="shop.css">
+  <!--Importing a kit to get the icons-->
+  <script src="https://kit.fontawesome.com/3be49a6d55.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <nav id="Navigation_Menu">
+    <img src="images/logo.png" class="logo" alt="logopic">
+    <a class="navigation-menu-link" href="Userprofile.html">Profile</a>
+    <a class="navigation-menu-link" href="Team.html">Team</a>
+    <a class="navigation-menu-link" href="shop.html">Shop</a>
+    <a class="navigation-menu-link" href="contentpage.html">Content</a>
+</nav>
+
+  <header>          
+    <div class="nav">
+      
+      <a href="#" class="LOGO">
+        Shop for Quality Education Equipments                 <!--A header text-->
+      </a>
+
+      <div class="box">
+        <div class="cart-count">0</div>       <!--A count of the items added to the cart-->
+        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>              <!--Cart icon on the header to the cart interface to appear once it is clicked-->
+      </div>
+
+      <div class="cart">                            <!--The cart interface-->
+        <div class="cart-title">Cart Items</div>
+        <div class="cart-content">
+
+        </div>
+        
+        <!--'Total' text and the total amount to be displayed in the cart-->
+      <div class="total">               
+        <div class="total-title">Total</div>
+        <div class="total-price">$.0</div>
+      </div>
+
+      <button class="btn-buy"><a href="payment.html">Buy Now</a></button>       <!--A button to direct to the payments page-->
+
+      <i class="fa-solid fa-xmark" id="cart-close"></i>                <!--Cart close(cross icon) icon-->
+
+      </div>
+    </div>
+  </header>
+
+  <!--Shop content where the products appear-->
+  <div class="container">         
+    <div class="shop-content">
+      <div class="product-box">         <!--A box to store each product-->
+        <div class="pic">
+          <img src="images/vendor_of_sweets.jpg" alt="VendorOfSweets" class="product-img">
+        </div>
+        <!--Details of the product-->
+        <h2 class="product-title">The Vendor of Sweets</h2>                  
+        <span class="product-price">$.14.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>                  <!--Icon to add the products to the cart-->
+      </div>
+
+      <div class="product-box">
+        <div class="pic"><img src="images/timeOfHope.jpg.png" alt="TimeOfHopeBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">Time of Hope</h2>
+        <span class="product-price">$.15.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>                  <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/Simplicity.jpg" alt="SimplicityBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">Simplicity</h2>
+        <span class="product-price">$.10.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>                <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/science.png" alt="ScienceBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">The November Molecule</h2>
+        <span class="product-price">$.11.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>              <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/javaBook.png"  alt="JavaBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">Java Programming Decoded </h2>
+        <span class="product-price">$.19.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>            <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/python.png" alt="pythonBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">Python Programming For Beginners</h2>
+        <span class="product-price">$.18.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>            <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/maths.png" alt="mathsBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">Problem Solving in GSCE Mathematics</h2>
+        <span class="product-price">$.17.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>            <!--Icon to add the products to the cart-->
+      </div>
+  
+      <div class="product-box">
+        <div class="pic"><img src="images/jsBook.jpg" alt="javasriptBook" class="product-img"></div>
+        <!--Details of the product-->
+        <h2 class="product-title">JavaScript Design Patterns</h2>
+        <span class="product-price">$.19.00</span>
+        <i class="fa-solid fa-cart-shopping add-cart"></i>            <!--Icon to add the products to the cart-->
+      </div>
+    </div>
+  </div>
+  <!--Linking the javascript code-->
+  <script src="shop.js"></script>
+</body>
+</html>

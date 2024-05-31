@@ -1,0 +1,279 @@
+/*Assinging a font style to the content*/
+*{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;    /*Removing any the extra spaces around the elements so that it would fit prefectly*/
+  padding: 0;   /*Removing any the extra spaces around the elements so that it would fit prefectly*/
+  box-sizing: border-box;     /*To avoid format changes*/
+}
+
+.logo{
+  width: 40px;
+}
+
+#Navigation_Menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 2px;
+  background-color: gray;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#Navigation_Menu a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent (.Navigation_Menu) */
+  cursor: pointer;
+}
+
+/*Hover effect on the navigation bar*/
+#Navigation_Menu a:hover{
+  text-decoration: underline;
+}
+
+body{
+  background-color:#4b4b4b;
+}
+
+header{           /*Position fixed to the top(Won't disappear even if scrolled dwown)*/
+  position: absolute;
+  top: 6%;
+  left: 0;
+  width: 100%;
+  z-index: 99;      /*Making it  the top layer(Other content will go under this if scrolled down)*/
+  background-color: rgb(108, 190, 228);
+  box-shadow: 8px 8px 6px rgb(150, 216, 232);   /*right bottom shadow with a blur effect of 6pixels*/
+}
+
+.nav{
+  max-width: 1200px;        /*maximum width of 1200 pixels of the screen*/
+  margin: auto;
+  width: 100%;              /*100% width along the 1200 pixels*/
+  height: 50px;
+  display: flex;
+  justify-content: space-between;       /*Equal space between the content(Content on either side of the assigned widths)*/
+  align-items: center;
+}
+
+.LOGO{
+  font-size: 1.1rem;      /*1 rem = 16pixels*/
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#ffffff;
+  text-shadow: 5px 5px 5px rgb(143, 210, 238);
+}
+
+.box{
+  color:white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+}
+
+/*Cart count which is positioned above the cart icon in the*/
+.cart-count{
+  position: absolute;
+  background-color: #2f3542;
+  top: -5px;
+  right: 0;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  line-height:20px ;
+  border-radius: 50%;       /*Displaying the item count inn a circle*/
+}
+
+#cart-icon{
+  font-size: 1.5rem;
+  cursor: pointer;          /*Cursor turns to a hand object*/
+  padding-top: 10px;
+}
+
+#cart-icon:hover{
+  color: blue;            /*Changig the color of the icon while hovering upon it*/
+  box-shadow: -5px 5px 5px blue;          /*left bottom shadow with a 5 pixel blur*/
+}
+
+img{
+  width: 100%;
+}
+
+.container{
+  max-width: 1200px;          /*Width of the shop*/
+  padding: 4rem;
+  margin: auto;               /*Center aligning the shop*/
+  width: 100%;
+}
+
+.shop-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,auto));   /*Fits the content according to the screen size of the device or when minimized*/
+  gap:1.5rem;                 /*Gaps between each product box*/
+  align-content:center;
+}
+
+.product-box{
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  border-radius: 3px;
+  margin-top: 7px;
+}
+
+.product-box:hover{
+  border: 5px solid rgb(226, 223, 223);
+  box-shadow: 8px 8px 5px rgb(226, 223, 223);
+  cursor: pointer;
+}
+ 
+.pic{
+  overflow: hidden;       /*Image stays inside the box */
+}
+
+.pic:hover img{
+transform: scale(1.2);    /*Enlarging the image when hovering on it*/
+}
+
+.product-title{       /*Product title below the  image*/
+  font-size: 1rem;
+  font-weight: 600;
+  color:#ff6348;
+}
+
+.product-price{
+  font-weight:500 ;
+}
+
+/*Positioning the 'add-cart' icon to the bottom right corner of the product box*/
+.add-cart{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #109304;
+  color:white;
+  padding: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-cart:hover{
+  background-color:rgb(108, 180, 243);
+  color: black;
+}
+  
+
+.cart{
+  position: fixed;
+  top: 0;
+  right: -100%;             /*Making it invisible to the user(Making it visible via javascript)*/
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;         /*Automatically provides a vertical scrollbar if the content overflows the vertical height*/
+  overflow-x: hidden;       /*Hides any content that exceeds horizontal width of the cart intrface*/
+  padding: 20px;
+  background-color: white;
+}
+
+/*Cart possition once the cart is visible*/
+.cart-active{
+  right:0;
+  transition: 0.5s;
+}
+
+.cart-title{
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-bottom:20px ;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cart-box{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;                        /*Gap between columns*/
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+
+.cart-img{
+  width: 75px;
+  height: 75px;
+  object-fit:cover;
+  border:2px solid  rgba(0,0,0,0.1);
+  padding: 5px;
+}
+
+.detail-box{
+  display: grid;
+  row-gap: 0.5rem;  
+}
+
+.price-box{
+  display: flex;
+  justify-content: space-between; 
+}
+
+.cart-price{
+  font-weight: 500;
+}
+
+#cart-quantity{
+  border:1px solid rgba(0,0,0,0.1);
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/*Trash bin icon to remove items from the cart*/
+.cart-remove{
+  font-size: 24px;
+  color:red;
+  cursor: pointer;
+}
+
+.total{
+  display: flex;
+  justify-content: flex-end;        /*Aligning the content to the right most end og the container*/
+  margin-top: 1.5rem;
+}
+
+.total-title{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.total-price{
+  margin-left: 0.5rem;    /*Some space away from the text 'Total'*/
+}
+
+.btn-buy{
+  padding: 12px 20px;       /*Managing the height and the width of the button*/
+  background-color: goldenrod;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*Hover effects*/
+.btn-buy:hover{
+  border: 3px solid goldenrod;
+  background-color: white;
+}
+
+/*cart=close icon(Cross) positioned in the top right most corner of the cart interface*/
+#cart-close{
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
