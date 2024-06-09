@@ -132,6 +132,7 @@ img{
  
 .pic{
   overflow: hidden;       /*Image stays inside the box */
+  transition:0.5s;
 }
 
 .pic:hover img{
